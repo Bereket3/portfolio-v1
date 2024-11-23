@@ -45,7 +45,9 @@ export function WordRotate({
         >
           {words[index]}
         </motion.h1>
+
       </AnimatePresence>
+
     </div>
   );
 }

@@ -18,26 +18,28 @@ export const Hero = () => {
               Hi <span>there</span>,
             </h1>
           </DelayedComponent>
-          <DelayedComponent>
+          <DelayedComponent
+            delay={0.4}>
             <h1 className={styles.subTitle}>
               I&apos;m <span className="text-theme-2 font-bold font-sans">Bereket Worku.</span>
             </h1>
           </DelayedComponent>
-          <DelayedComponent>
+          <DelayedComponent
+            delay={0.8}>
             <WordRotate
               duration={3500}
               className={cn(styles.subTitle, "font-bold")}
-              words={["Software Developer", "Web Developer", "Modile Application Developer"]}
+              words={["Software Developer", "Web Application Developer", "Modile Application Developer"]}
             />
           </DelayedComponent>
-          <DelayedComponent>
+          <DelayedComponent
+            delay={1.2}>
             <p className={styles.aboutCopy}>
-              I&apos;ve spent the last 3 years building and scaling applications for
-              some pretty cool companies and individuals. I also create interesting self projects on my spare time.
-              Let&apos;s connect!
+              I&apos;ve been building and optimizing innovative applications and tackling exciting tech challenges with a focus on functionality and user experience. Whether it&apos;s creating impactful solutions for businesses or diving into self-driven projects, I&apos;m all about crafting clean, efficient, and meaningful software. Let&apos;s work togather!
             </p>
           </DelayedComponent>
-          <DelayedComponent>
+          <DelayedComponent
+            delay={1.6}>
             <RainbowButton
               onClick={() => document.getElementById("contact")?.scrollIntoView()}
             >

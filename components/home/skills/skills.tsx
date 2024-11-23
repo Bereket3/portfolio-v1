@@ -1,8 +1,9 @@
 
 import IconCloud from "@/components/UI/icon-cloud";
 import { SectionHeader } from "@/components/utils/SectionHeader";
+import { cn } from "@/lib/utils";
 import ListStuggerdView from "./stuggerd-list";
-
+import styles from "./skills.module.scss"
 
 const slugs = [
   "typescript",
@@ -36,7 +37,8 @@ const slugs = [
   "gitlab",
   "visualstudiocode",
   "androidstudio",
-  "linux"
+  "linux",
+  "socketio"
 ];
 
 const programmingLanguages: Array<string> = [
@@ -52,7 +54,7 @@ const programmingLanguages: Array<string> = [
 ];
 
 const frameworks: Array<string> = [
-  "Django", "React", "NodeJs", "Express", "NextJs", "NestJs", "FastAPI", "NumPy", "PyTorch"
+  "Django", "React", "NodeJs", "Express", "NextJs", "NestJs", "FastAPI", "NumPy", "PyTorch", "SocketIO"
 ]
 
 const platformsAndTechnologys: Array<string> = [
@@ -74,14 +76,13 @@ export default function Skills() {
   return (
     <section id="skills" className="section-wrapper">
       <SectionHeader title="Skills" dir="r" />
-      <div className="grid grid-cols-2">
+      <div className={cn(styles.wrapper)}>
         <div>
           <ListStuggerdView data={programmingLanguages} />
           <ListStuggerdView data={frameworks} />
           <ListStuggerdView data={platformsAndTechnologys} />
           <ListStuggerdView data={dataBases} />
         </div>
-
         <IconCloud iconSlugs={slugs} />
       </div >
     </section >
