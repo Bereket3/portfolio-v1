@@ -13,26 +13,24 @@ export const About = () => {
         <div>
           <Reveal>
             <p className={`${styles.aboutText} ${styles.highlightFirstLetter}`}>
-              Howdy! I&apos;m John Carlo Devera, and I&apos;m a Bachelor of Science in Information Technology graduate.
-              <br/><br/>
-              I have experience working in both the mobile and web development worlds, with a focus on frontend development. I&apos;m passionate about creating beautiful, responsive websites that provide a great user experience.
-             </p>
+              Hello! I&apos;m Bereket Worku, a chemical engineering student passion for backend development and artificial intelligence.
+              <br /><br />
+              I specialize in building robust, scalable backend systems that power seamless user experiences. My expertise includes Python, Django, Node.js, MySQL, and other technologies that enable me to create efficient, full-stack applications. Currently, I’m diving deep into the world of deep learning, exploring how AI can revolutionize software development and beyond.            </p>
           </Reveal>
           <Reveal>
             <p className={styles.aboutText}>
-              My skills include HTML, CSS, JavaScript, and various frontend frameworks like React and Vue.js. 
-              I&apos;ve also worked with backend technologies like Node.js, Firebase, MongoDB and PHP/Laravel , allowing me to build full-stack applications.
+              I&apos;m a chemical engineering student at Addis Ababa University with a passion for backend development. I build scalable systems using Python, Django, and MySQL. As a self-learner, I&apos;m exploring deep learning&apos;s potential while blending engineering principles with coding. My projects focus on solving real-world problems with innovative, impactful solutions.
             </p>
           </Reveal>
           <Reveal>
             <p className={styles.aboutText}>
-              When I&apos;m not coding, I enjoy digital painting. 
+              When I&apos;m not coding, I enjoy making music and watching movie.
               I believe that maintaining a healthy work-life balance is crucial for staying productive and motivated.
             </p>
           </Reveal>
           <Reveal>
             <p className={styles.aboutText}>
-              I&apos;m always looking for new challenges and opportunities to learn and grow as a developer. 
+              I&apos;m always looking for new challenges and opportunities to learn and grow as a developer.
               If you&apos;re interested in working together or have any questions, please don&apos;t hesitate to get in touch!
               🔗
             </p>

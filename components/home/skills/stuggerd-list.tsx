@@ -1,11 +1,9 @@
-
 import React, { useEffect, useRef } from "react";
 import { Reveal } from "@/components/utils/Reveal"
 import { motion, useAnimation, useInView } from "framer-motion"
 import { AiFillCode } from "react-icons/ai"
 import ChipComponent from "./chips"
 import styles from "../about/stats.module.scss"
-
 
 interface ListStuggerdViewProps {
   data: Array<string>

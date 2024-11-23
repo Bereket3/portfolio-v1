@@ -1,6 +1,7 @@
 .heading {
-  height: calc(45px + 3.6rem);
-  padding: 0 3.6rem;
+  height: 15rem;
+  padding: 1.2rem 3.6rem;
+  margin-top: 3.6rem;
 
   display: flex;
   align-items: center;
@@ -9,24 +10,12 @@
   position: sticky;
   top: 0;
   z-index: 20;
-  background: var(--bg-opaque);
-  backdrop-filter: blur(12px);
+
+  /*  backdrop-filter: blur(12px); */
 
   font-size: var(--text-md);
   font-weight: bold;
 
-  @media (max-width: 768px) {
-    padding: 0 2.4rem;
-  }
-}
 
-.headingButtons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
 
-    > a {
-      height: 46px;
-    }
 }

@@ -1,3 +1,5 @@
+"use client"
+
 import React, { CSSProperties } from "react";
 
 import { cn } from "@/lib/utils";
@@ -11,7 +13,7 @@ interface RippleProps {
 
 const Ripple = React.memo(function Ripple({
   mainCircleSize = 210,
-  mainCircleOpacity = 0.24,
+  mainCircleOpacity = 0.54,
   numCircles = 8,
   className,
 }: RippleProps) {

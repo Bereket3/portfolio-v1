@@ -1,20 +1,20 @@
 import React from "react";
-import { SideBar } from "../nav/SideBar";
 import { Hero } from "./hero/Hero";
-import { Heading } from "../nav/Heading";
 import { About } from "./about/About";
 import { Projects } from "./projects/Projects";
 import { Experience } from "./experience/Experience";
 import { Contact } from "./contact/Contact";
 import Skills from "./skills/skills";
+import { FloatingDockDemo } from "../nav/components/floting-dock-nav";
 
 export const Home = () => {
   return (
     <>
-      <div className="grid grid-cols-[60px_1fr]">
-        <SideBar />
+      <div className="grid grid-cols-1">
+        {/* <SideBar /> */}
         <main id="main">
-          <Heading />
+          {/* <Heading /> */}
+          <FloatingDockDemo />
           <Hero />
           <Skills />
           <About />
