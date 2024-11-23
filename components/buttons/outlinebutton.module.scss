@@ -1,0 +1,14 @@
+.outlineButton {
+  svg {
+    display: none;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 0;
+    padding: .5rem .5rem;
+
+    svg {
+      display: block;
+    }
+  }
+}
