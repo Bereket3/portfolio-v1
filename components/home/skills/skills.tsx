@@ -1,9 +1,8 @@
-
 import IconCloud from "@/components/UI/icon-cloud";
 import { SectionHeader } from "@/components/utils/SectionHeader";
 import { cn } from "@/lib/utils";
 import ListStuggerdView from "./stuggerd-list";
-import styles from "./skills.module.scss"
+
 
 const slugs = [
   "typescript",
@@ -76,7 +75,7 @@ export default function Skills() {
   return (
     <section id="skills" className="section-wrapper">
       <SectionHeader title="Skills" dir="r" />
-      <div className={cn(styles.wrapper)}>
+      <div className={cn("grid grid-cols-1 md:grid-cols-2 h-max")}>
         <div>
           <ListStuggerdView data={programmingLanguages} />
           <ListStuggerdView data={frameworks} />

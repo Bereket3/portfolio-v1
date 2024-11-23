@@ -4,12 +4,12 @@ import AnimatedGridPattern from "@/components/UI/animated-grid-pattern";
 import { RainbowButton } from "@/components/UI/rainbow-button";
 import DelayedComponent from "@/components/UI/delayed-animation";
 import { WordRotate } from "@/components/UI/word-rotate";
-
+import { OutlineButton } from "@/components/buttons/OutlineButton";
 
 export const Hero = () => {
   return (
     <section className={cn(
-      styles.hero,
+      "pt-[4.6rem] mx-[1.2rem]"
     )}>
       <div className="flex justify-center">
         <div className="">
@@ -39,12 +39,19 @@ export const Hero = () => {
             </p>
           </DelayedComponent>
           <DelayedComponent
-            delay={1.6}>
-            <RainbowButton
-              onClick={() => document.getElementById("contact")?.scrollIntoView()}
-            >
-              Contact me
-            </RainbowButton>
+            delay={1.6}
+          >
+            <div className="flex justify-between">
+              <RainbowButton
+                className="h-14"
+                onClick={() => document.getElementById("contact")?.scrollIntoView()}
+              >
+                Contact me
+              </RainbowButton>
+              <OutlineButton onClick={() => window.open("/bereket_worku_resume_v11.pdf")}>
+                My resume
+              </OutlineButton>
+            </div>
           </DelayedComponent>
         </div>
       </div>
@@ -54,6 +61,7 @@ export const Hero = () => {
         duration={3}
         repeatDelay={1}
         className={cn(
+          styles.gridType,
           "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
           "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
         )}
