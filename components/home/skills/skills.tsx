@@ -73,14 +73,14 @@ export default function Skills() {
 
 
   return (
-    <section id="skills" className="section-wrapper">
+    <section id="skills" className="px-20">
       <SectionHeader title="Skills" dir="r" />
       <div className={cn("grid grid-cols-1 md:grid-cols-2 h-max")}>
         <div>
-          <ListStuggerdView data={programmingLanguages} />
-          <ListStuggerdView data={frameworks} />
-          <ListStuggerdView data={platformsAndTechnologys} />
-          <ListStuggerdView data={dataBases} />
+          <ListStuggerdView data={programmingLanguages} title="Programming Languages" />
+          <ListStuggerdView data={frameworks} title="Frameworks" />
+          <ListStuggerdView data={platformsAndTechnologys} title="Platforms and Technology" />
+          <ListStuggerdView data={dataBases} title="DataBase" />
         </div>
         <IconCloud iconSlugs={slugs} />
       </div >

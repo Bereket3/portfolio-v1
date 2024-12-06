@@ -1,15 +1,19 @@
+"use client"
+
 import React, { useEffect, useRef } from "react";
 import { Reveal } from "@/components/utils/Reveal"
 import { motion, useAnimation, useInView } from "framer-motion"
 import { AiFillCode } from "react-icons/ai"
 import ChipComponent from "./chips"
-import styles from "../about/stats.module.scss"
+
+import { cn } from "@/lib/utils";
 
 interface ListStuggerdViewProps {
-  data: Array<string>
+  data: Array<string>,
+  title?: String,
 }
 
-export default function ListStuggerdView({ data }: ListStuggerdViewProps) {
+export default function ListStuggerdView({ data, title }: ListStuggerdViewProps) {
 
   const mainControls = useAnimation();
   const slideControls = useAnimation();
@@ -31,14 +35,15 @@ export default function ListStuggerdView({ data }: ListStuggerdViewProps) {
   return (
     <div ref={ref} >
       <Reveal>
-        <div className={styles.statColumn}>
-          <h4>
+        <div className={cn()}>
+          <h4 className="flex flex-row py-6">
             <AiFillCode size="2.4rem" color="00b5b1" />
-            <span>Programming Languages</span>
+            <p className="pl-2 text-[30px] font-bold">{title}</p>
           </h4>
-          <div className="flex flex-wrap gap-[1.6rem] mb-[4.8rem]">
+          <div className="flex flex-wrap gap-4 mb-8">
             {data.map((text, index) => (
               <motion.div
+                key={index}
                 variants={{
                   hidden: { opacity: 0, y: 100 },
                   visible: { opacity: 1, y: 0 },

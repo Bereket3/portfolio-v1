@@ -3,7 +3,7 @@ import {
   AiFillLinkedin,
   AiFillGithub,
   AiFillInstagram,
-  AiFillYoutube,
+
 } from "react-icons/ai";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -40,15 +40,7 @@ export const MyLinks = () => {
         </Link>
       </motion.span>
 
-      {/* <motion.span
-        initial={{ y: -30, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-      >
-        <Link href="https://www.youtube.com/@aluckyfinsenpai2622" target="_blank" rel="nofollow">
-          <AiFillYoutube size="2.4rem" />
-        </Link>
-      </motion.span> */}
+
     </div>
   );
 };

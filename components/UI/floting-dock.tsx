@@ -49,7 +49,7 @@ const FloatingDockMobile = ({
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute top-full mb-2 inset-x-0 flex flex-col gap-2"
+            className="absolute top-full mb-2 pt-2 inset-x-0 flex flex-col gap-2"
           >
             {items.map((item, idx) => (
               <motion.div
@@ -71,9 +71,9 @@ const FloatingDockMobile = ({
                 <Link
                   href={item.href}
                   key={item.title}
-                  className="h-10 w-10 rounded-full bg-neutral-900 flex items-center justify-center"
+                  className="h-20 w-20 rounded-full bg-neutral-900 flex items-center justify-center"
                 >
-                  <div className="h-4 w-4">{item.icon}</div>
+                  <div className="h-15 w-15">{item.icon}</div>
                 </Link>
               </motion.div>
             ))}
@@ -82,9 +82,9 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="h-10 w-10 rounded-full bg-neutral-800 flex items-center justify-center"
+        className="h-20 w-20 rounded-full bg-neutral-900 flex items-center justify-center"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-400" />
+        <IconLayoutNavbarCollapse className="h-15 w-15 text-neutral-400" />
       </button>
     </div>
   );
@@ -103,7 +103,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-16 gap-6 items-end  rounded-2xl bg-neutral-900 px-4 pb-3",
+        "mx-auto hidden md:flex h-20 gap-6 items-end  rounded-2xl bg-neutral-900 px-4 pb-3",
         className
       )}
     >
@@ -173,15 +173,15 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="aspect-square  rounded-full bg-neutral-800 flex items-center justify-center relative"
+        className="aspect-square transition-transform rounded-full bg-neutral-800 flex items-center justify-center relative"
       >
         <AnimatePresence>
           {hovered && (
             <motion.div
-              initial={{ opacity: 0, y: 10, x: "-50%" }}
-              animate={{ opacity: 1, y: 0, x: "-50%" }}
-              exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="px-2 mt-2 py-0.5 whitespace-pre rounded-md  border bg-neutral-800 border-neutral-900 text-white   absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-sm"
+              initial={{ opacity: 0, y: 5, x: "-25%" }}
+              animate={{ opacity: 1, y: 0, x: "-25%" }}
+              exit={{ opacity: 0, y: 2, x: "-25%" }}
+              className="px-2 left-1/2 mt-2 py-0.5 whitespace-pre rounded-md  border-none text-white absolute -top-8 w-fit text-md"
             >
               {title}
             </motion.div>

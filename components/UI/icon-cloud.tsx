@@ -33,7 +33,6 @@ export const cloudProps: Omit<ICloud, "children"> = {
     outlineColour: "#0000",
     maxSpeed: 0.04,
     minSpeed: 0.02,
-    // dragControl: false,
   },
 };
 
@@ -72,17 +71,15 @@ export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
   }, [iconSlugs]);
 
   const renderedIcons = useMemo(() => {
-    if (!data) return null;
-
+    if (!data) return [];
     return Object.values(data.simpleIcons).map((icon) =>
       renderCustomIcon(icon, theme || "dark"),
     );
   }, [data, theme]);
 
   return (
-    // @ts-ignore
     <Cloud {...cloudProps}>
-      <>{renderedIcons}</>
+      {renderedIcons}
     </Cloud>
   );
 }

@@ -1,6 +1,6 @@
 import styles from "./header.module.scss";
 import { Reveal } from "./Reveal";
-
+import { cn } from "@/lib/utils";
 interface Props {
   title: string;
   dir?: "l" | "r";
@@ -9,18 +9,18 @@ interface Props {
 export const SectionHeader = ({ title, dir = "r" }: Props) => {
   return (
     <div
-      className={styles.sectionHeader}
-      style={{ flexDirection: dir === "r" ? "row" : "row-reverse" }}
+      className={cn(
+        "flex content-center justify-center"
+      )}
     >
-      <div className={styles.line} />
-      <h3>
-        <Reveal>
-          <span className={styles.title}>
-            {title}
-            <span>.</span>
-          </span>
-        </Reveal>
-      </h3>
+      {/*  <Reveal> */}
+      <h2 className={cn(
+        "text-5xl font-bold text-white py-6"
+      )}>
+        {title}
+        <span>.</span>
+      </h2>
+      {/*   </Reveal> */}
     </div>
   );
 };

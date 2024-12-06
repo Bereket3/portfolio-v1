@@ -76,11 +76,15 @@ module.exports = {
   			'theme-6': '#2f4858'
   		},
   		animation: {
+  			spotlight: 'spotlight 2s ease .75s 1 forwards',
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
   			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
   			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear',
   			ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite',
-  			shine: 'shine var(--duration) infinite linear'
+  			shine: 'shine var(--duration) infinite linear',
+  			grid: 'grid 15s linear infinite',
+  			'background-position-spin': 'background-position-spin 3000ms infinite alternate',
+  			pulse: 'pulse var(--duration) ease-out infinite'
   		},
   		keyframes: {
   			ripple: {
@@ -127,6 +131,40 @@ module.exports = {
   				},
   				to: {
   					'background-position': '0% 0%'
+  				}
+  			},
+  			spotlight: {
+  				'0%': {
+  					opacity: '0',
+  					transform: 'translate(-72%, -62%) scale(0.5)'
+  				},
+  				'100%': {
+  					opacity: '1',
+  					transform: 'translate(-50%,-40%) scale(1)'
+  				}
+  			},
+  			grid: {
+  				'0%': {
+  					transform: 'translateY(-50%)'
+  				},
+  				'100%': {
+  					transform: 'translateY(0)'
+  				}
+  			},
+  			'background-position-spin': {
+  				'0%': {
+  					backgroundPosition: 'top center'
+  				},
+  				'100%': {
+  					backgroundPosition: 'bottom center'
+  				}
+  			},
+  			pulse: {
+  				'0%, 100%': {
+  					boxShadow: '0 0 0 0 var(--pulse-color)'
+  				},
+  				'50%': {
+  					boxShadow: '0 0 0 8px var(--pulse-color)'
   				}
   			}
   		}
