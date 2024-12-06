@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { Reveal } from "@/components/utils/Reveal";
 import { useAnimation, useInView, motion } from "framer-motion";
@@ -5,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { AiFillGithub, AiOutlineExport } from "react-icons/ai";
 import { ProjectModal } from "./ProjectModal";
-import styles from "./projects.module.scss";
+
 
 import { MagicCard } from "@/components/UI/magic-card";
 import { cn } from "@/lib/utils";
@@ -71,43 +72,38 @@ export const Project = ({
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
               onClick={() => setIsOpen(true)}
+              className=""
             >
               <Image
                 priority
                 src={imgSrc}
                 alt={`An image of the ${title} project.`}
-                width={1000}
-
-                height={0}
-                className="object-cover p-6 border rounded-sm"
-                style={{
-                  width: hovered ? "90% !important" : "85% !important",
-                  rotate: hovered ? "2deg" : "0deg",
-
-                }}
+                width={450}
+                height={400}
+                className="object-fill rounded-xl  m-2"
               />
             </div>
-            <div className={cn("p-10")}>
+            <div className={cn("p-10 flex flex-col gap-10")}>
               <Reveal width="100%">
-                <div className={styles.projectTitle}>
+                <div className="flex flex-row justify-between">
                   <h4>{title}</h4>
-                  <div className={styles.projectTitleLine} />
+                  <div className=" flex flex-row">
+                    <Link href={code} target="_blank" rel="nofollow">
+                      <AiFillGithub size="2.8rem" />
+                    </Link>
 
-                  <Link href={code} target="_blank" rel="nofollow">
-                    <AiFillGithub size="2.8rem" />
-                  </Link>
-
-                  <Link href={projectLink} target="_blank" rel="nofollow">
-                    <AiOutlineExport size="2.8rem" />
-                  </Link>
+                    <Link href={projectLink} target="_blank" rel="nofollow">
+                      <AiOutlineExport size="2.8rem" />
+                    </Link>
+                  </div>
                 </div>
               </Reveal>
               <Reveal>
-                <div className={cn(styles.projectTech, "text-theme-3")}>{tech.join(" - ")}</div>
+                <div className={cn("text-theme-3")}>{tech.join(" - ")}</div>
               </Reveal>
               <Reveal>
                 <>
-                  <p className={cn(styles.projectDescription, "flex flex-col items-stretch ")}>
+                  <p className={cn("flex flex-col items-stretch ")}>
                     {description} <br />
                     <span className="text-theme-4" onClick={() => setIsOpen(true)}>Learn more {">"}</span>
                   </p>

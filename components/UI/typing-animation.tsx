@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface TypingAnimationProps {
@@ -34,13 +34,26 @@ export default function TypingAnimation({
   }, [duration, i]);
 
   return (
-    <h1
+    <motion.h1
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+      }}
+      initial="hidden"
+      whileInView="animate"
+      animate={{
+        opacity: 1
+      }}
+      viewport={{ once: true }}
+      transition={{
+        delay: 1
+      }}
       className={cn(
-        "font-display text-4xl font-bold leading-[5rem] tracking-[-0.02em] drop-shadow-sm",
+        "font-display uppercase text-center text-4xl font-bold leading-[5rem] tracking-[-0.02em] drop-shadow-sm",
         className,
       )}
     >
       {displayedText ? displayedText : text}
-    </h1>
+    </motion.h1>
   );
 }

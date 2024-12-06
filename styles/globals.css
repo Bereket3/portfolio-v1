@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    font-size: 62.5%;
+    font-size: 100%;
     /* Set base font size to 10px for easier rem calculations */
     --color-1: 0 100% 63%;
     --color-2: 270 100% 63%;
@@ -34,12 +34,12 @@
   --text: rgb(235, 236, 243);
   --brand: #0aff9d;
 
-  --text-xs: 1.6rem;
-  --text-sm: 1.8rem;
-  --text-md: 2.2rem;
-  --text-lg: 3.6rem;
-  --text-xl: 5.6rem;
-  --text-2xl: 9.6rem;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
 }
 
 * {
@@ -103,4 +103,10 @@ a {
 
   }
 
+}
+
+@layer utilities {
+  .heading {
+    @apply font-bold text-4xl md:text-5xl text-center;
+  }
 }
