@@ -19,9 +19,10 @@ const Home = () => {
           navItems={navItems}
         />
         <Hero />
-        {/*  <Skills /> */}
         {/* <About /> */}
         <Projects />
+        <Skills />
+
         {/* <Experience /> */}
         <Contact />
       </div>

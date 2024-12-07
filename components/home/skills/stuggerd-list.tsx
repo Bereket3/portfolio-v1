@@ -1,11 +1,9 @@
 "use client"
 
 import React, { useEffect, useRef } from "react";
-import { Reveal } from "@/components/utils/Reveal"
 import { motion, useAnimation, useInView } from "framer-motion"
 import { AiFillCode } from "react-icons/ai"
 import ChipComponent from "./chips"
-
 import { cn } from "@/lib/utils";
 
 interface ListStuggerdViewProps {
@@ -34,34 +32,33 @@ export default function ListStuggerdView({ data, title }: ListStuggerdViewProps)
 
   return (
     <div ref={ref} >
-      <Reveal>
-        <div className={cn()}>
-          <h4 className="flex flex-row py-6">
-            <AiFillCode size="2.4rem" color="00b5b1" />
-            <p className="pl-2 text-[30px] font-bold">{title}</p>
-          </h4>
-          <div className="flex flex-wrap gap-4 mb-8">
-            {data.map((text, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  hidden: { opacity: 0, y: 100 },
-                  visible: { opacity: 1, y: 0 },
-                }}
+      <div className={cn()}>
+        <h4 className="flex flex-row py-6">
+          <AiFillCode size="2.4rem" color="008fa2" />
+          <p className="pl-2 text-[30px] font-bold">{title}</p>
+        </h4>
+        <div className="flex flex-wrap gap-4 mb-8">
+          {data.map((text, index) => (
+            <motion.div
+              key={index}
+              variants={{
+                hidden: { opacity: 0, y: 100 },
+                visible: { opacity: 1, y: 0 },
+              }}
 
-                initial="hidden"
-                whileInView="animate"
-                viewport={{ once: true }}
-                animate={mainControls}
-                transition={{ duration: 0.5, delay: index * 0.25 }}
-              >
-                <ChipComponent key={index} text={text} />
-              </motion.div>
-            ))}
-          </div>
+              initial="hidden"
+              whileInView="animate"
+              viewport={{ once: true }}
+              animate={mainControls}
+              transition={{ duration: 0.5, delay: index * 0.25 }}
+            >
+              <ChipComponent key={index} text={text} />
+            </motion.div>
+          ))}
         </div>
-      </Reveal >
+      </div>
     </div >
+
   )
 
 }
