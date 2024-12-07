@@ -4,10 +4,9 @@ import { cn } from "@/lib/utils";
 
 export const Projects = () => {
   return (
-    <section className="section-wrapper" id="projects">
-      <SectionHeader title="Projects" dir="r" />
-
-      <div className={cn("grid md:grid-cols-2 gap-4 grid-cols-1")}>
+    <section className="relative pb-20 pt-10" id="projects">
+      <SectionHeader />
+      <div className={cn("grid md:grid-cols-2 gap-4 grid-cols-1 md:w-[85%] justify-center content-center mx-auto")}>
         {projects.map((project) => {
           return <Project key={project.title} {...project} />;
         })}
@@ -16,13 +15,13 @@ export const Projects = () => {
   );
 };
 
-const projects = [
+const projects: Array<any> = [
   {
     title: "Classified",
     imgSrc: "/project-imgs/agency-listing.png",
     code: "#",
     projectLink: "#",
-    tech: ["React", "Nextjs", "Tailwind", "Prisma"],
+    tech: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     description: "An Insurance Agency Listing Web Application.",
     modalContent: (
       <>
@@ -42,7 +41,7 @@ const projects = [
     imgSrc: "/project-imgs/elancerz.png",
     code: "https://www.github.com",
     projectLink: "https://elancerz.com/",
-    tech: ["React", "Nextjs", "Sytled Components", "Firebase Auth", "Laravel"],
+    tech: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
     description:
       "A Talent finder app for anything around the world. This is my first time as a React developer job.",
     modalContent: (
@@ -65,7 +64,7 @@ const projects = [
     code: "https://www.github.com",
     // projectLink: "https://agency-iron-crm.herokuapp.com/",
     projectLink: "#",
-    tech: ["React", "MUI", "MongoDB", "Postgres", "Python"],
+    tech: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     description:
       "A Dashboard for clients and admin of Rocky Mountain West Insurance LLC. using Vuejs and re-worked using Reactjs.",
     modalContent: (
@@ -91,7 +90,7 @@ const projects = [
     code: "https://www.github.com",
     projectLink:
       "https://play.google.com/store/apps/details?id=com.ellinx.lightapps.worshiphim&hl=en&gl=US",
-    tech: ["React", "React Native", "Styled Components", "Android"],
+    tech: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     description:
       "WorshipHIM is a chord and lyrics app developed to help ease everyone in their worship to God.",
     modalContent: (
@@ -111,7 +110,7 @@ const projects = [
     imgSrc: "/project-imgs/worshiphim.png",
     code: "https://www.github.com",
     projectLink: "https://worshiphim.vercel.app/",
-    tech: ["React", "Nextjs", "Tailwind", "Google Play Scrapper", "Ko-Fi"],
+    tech: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     description:
       "Landing Page of WorshipHIM mobile application for showcasing feature rich and tools of the app.",
     modalContent: (
@@ -132,7 +131,7 @@ const projects = [
     imgSrc: "/project-imgs/portfolio-01.png",
     code: "https://github.com/jcdevz-dev/portfolio",
     projectLink: "#",
-    tech: ["React", "Styled Components", "Typescript", "Gatsby"],
+    tech: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     description: "First Portfolio Made with React JS",
     modalContent: (
       <>
@@ -149,7 +148,7 @@ const projects = [
     imgSrc: "/project-imgs/portfolio-00.png",
     code: "https://github.com/jcdevz-dev/jc-portfolio",
     projectLink: "https://jc-devera.vercel.app/",
-    tech: ["React", "Styled Components", "Typescript"],
+    tech: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     description: "First Portfolio Made with React JS",
     modalContent: (
       <>

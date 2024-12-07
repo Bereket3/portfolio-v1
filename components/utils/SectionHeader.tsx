@@ -1,26 +1,39 @@
-import styles from "./header.module.scss";
-import { Reveal } from "./Reveal";
-import { cn } from "@/lib/utils";
-interface Props {
-  title: string;
-  dir?: "l" | "r";
-}
+"use client";
 
-export const SectionHeader = ({ title, dir = "r" }: Props) => {
+import { Highlight } from "../UI/hero-highlight";
+import { motion } from "framer-motion";
+export function SectionHeader() {
   return (
-    <div
-      className={cn(
-        "flex content-center justify-center"
-      )}
-    >
-      {/*  <Reveal> */}
-      <h2 className={cn(
-        "text-5xl font-bold text-white py-6"
-      )}>
-        {title}
-        <span>.</span>
-      </h2>
-      {/*   </Reveal> */}
-    </div>
+    <>
+      <div className="pb-24 ">
+        <motion.h1
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          viewport={{
+            once: true
+          }}
+          whileInView={{
+            opacity: 1,
+            y: [20, -5, 0],
+
+          }}
+          transition={{
+            duration: 0.5,
+            ease: [0.4, 0.0, 0.2, 1],
+          }}
+
+          className="text-3xl px-2 md:text-6xl  font-bold text-white max-w-5xl leading-relaxed lg:leading-snug text-center mx-auto "
+        >
+          Innovative Solutions  {" "}
+          <span className="block">
+            <Highlight className="text-white break-words">
+              Crafted With Passion.
+            </Highlight>
+          </span>
+        </motion.h1>
+      </div>
+    </>
   );
-};
+}

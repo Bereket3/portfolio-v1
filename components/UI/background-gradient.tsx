@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import React from "react";
 import { motion } from "framer-motion";
@@ -31,10 +30,10 @@ export const BackgroundGradient = ({
         transition={
           animate
             ? {
-              duration: 5,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }
+                duration: 5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }
             : undefined
         }
         style={{
@@ -52,10 +51,10 @@ export const BackgroundGradient = ({
         transition={
           animate
             ? {
-              duration: 5,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }
+                duration: 5,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }
             : undefined
         }
         style={{

@@ -13,14 +13,19 @@ export default function DelayedComponent({ className, children, delay }: Delayed
       x: -70,
       opacity: 0
     }}
-    animate={{
+    whileInView={{
       x: 0,
       opacity: 1
     }}
-    transition={{ duration: 1, delay: 0.2 + delay! }}
+    viewport={{
+      once: true
+    }}
+    transition={{
+      duration: 1, delay: 0.2 + delay!
+    }}
     className={className}
   >
     {children}
-  </motion.div>
+  </motion.div >
 
 }
